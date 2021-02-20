@@ -558,6 +558,7 @@ a {
 /* =====header===== */
 
 .main-nav .link {
+  display: block;
   color: var(--secondary-text-color);
   font-family: Roboto, sans-serif;
   font-style: normal;
