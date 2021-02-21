@@ -60,7 +60,20 @@
         </div>
       </section>
       <div class="backdrop is-hidden" data-modal>
-        <div class="modal"><button data-modal-close>закрыть</button></div>
+        <div class="modal">
+          <button class="modal-close" data-modal-close>
+            <svg class="icon-close">
+              <use href="./images/sprite.svg#icon-close">
+                #shadow-root(closed)
+                <svg id="icon-exit" viewBox="0 0 32 32">
+                  <path
+                    d="M32 3.223l-3.223-3.223-12.777 12.777-12.777-12.777-3.223 3.223 12.777 12.777-12.777 12.777 3.223 3.223 12.777-12.777 12.777 12.777 3.223-3.223-12.777-12.777 12.777-12.777z"
+                  ></path>
+                </svg>
+              </use>
+            </svg>
+          </button>
+        </div>
       </div>
       <section class="section-work">
         <div class="container">
@@ -98,13 +111,31 @@
           <h2 class="images-title">Чем мы занимаемся</h2>
           <ul class="container-list">
             <li>
-              <img src="./images/foto1.jpg" alt="laptop" width="370" />
+              <div class="wrapper-pictures">
+                <img src="./images/foto1.jpg" alt="laptop" width="370" />
+
+                <div class="wrapper-list">
+                  <p class="wrapper-text">Десктопные приложения</p>
+                </div>
+              </div>
             </li>
             <li>
-              <img src="./images/foto2.jpg" alt="smartphone" width="370" />
+              <div class="wrapper-pictures">
+                <img src="./images/foto2.jpg" alt="smartphone" width="370" />
+
+                <div class="wrapper-list">
+                  <p class="wrapper-text">Мобильные приложения</p>
+                </div>
+              </div>
             </li>
             <li>
-              <img src="./images/foto3.jpg" alt="tablet" width="370" />
+              <div class="wrapper-pictures">
+                <img src="./images/foto3.jpg" alt="tablet" width="370" />
+
+                <div class="wrapper-list">
+                  <p class="wrapper-text">Дизайнерские решения</p>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
