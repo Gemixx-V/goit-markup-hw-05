@@ -16,6 +16,7 @@
   --background-color: #f5f4fa;
   --border-header: #ececec;
   --border-portfolio: #eeeeee;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .body {
@@ -124,7 +125,7 @@ button {
   left: 0;
   border-radius: 2px;
   background-color: var(--accent-color);
-  transition: opacity 250ms var(--cubic), background-color 250ms var(--cubic);
+  transition: background-color 250ms var(--cubic);
 }
 
 .site-nav,
@@ -677,6 +678,9 @@ button {
 .portfolio-element > .link {
   display: block;
 }
+.link {
+  transition: color 250ms var(--cubic);
+}
 
 .portfolio-cards {
   text-align: left;
@@ -709,33 +713,20 @@ button {
   overflow: hidden;
 }
 
-.project-photo-wrapper::before {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
-.project-photo-wrapper:hover::before {
-  opacity: 1;
-}
-
 .overlay {
   position: absolute;
+  bottom: 0;
   left: 0;
-  top: 0;
-  transform: translateY(100%);
-  display: flex;
-  align-items: center;
   width: 100%;
   height: 100%;
-  padding: 24px;
-  text-align: center;
+  margin: 0;
+  background: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  transform: translateY(100%);
+  transition: transform 250ms var(--cubic);
+}
+.overlay-title {
+  align-items: center;
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
@@ -743,10 +734,10 @@ button {
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--main-background-color);
+  text-align: left;
 }
-
-.project-photo-wrapper:hover .overlay,
-.project-photo-wrapper:focus .overlay {
+.portfolio-element > .link:hover .overlay,
+.portfolio-element > .link:focus .overlay {
   transform: translateY(0);
 }
 
