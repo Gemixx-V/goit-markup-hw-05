@@ -680,7 +680,7 @@ button {
 }
 
 .part .button {
-  background-color: var(--main-background-color);
+  background-color: var(--background-color);
   color: var(--secondary-text-color);
   cursor: pointer;
   font-family: Roboto, sans-serif;
